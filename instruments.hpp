@@ -7,10 +7,11 @@ using namespace std;
 class Instruments
 {
     private:
-        string m_notes;
-    public:
+        string m_nom;
+        string m_rythme;
+    public: 
         Instruments();
-        string get_notes();
+        string get_nom();
         virtual void Jouer();
 
 };

@@ -4,12 +4,12 @@
 
 Instruments::Instruments()
 {
-	string m_notes = "none";
+	string m_nom = "none";
 };
 
-string Instruments::get_notes()
+string Instruments::get_nom()
 {
-	return m_notes;
+	return m_nom;
 };
 
 void Instruments::Jouer()
@@ -26,5 +26,6 @@ Piano::Piano(): Instruments
 
 void Piano::Jouer()
 {
-
+	cout <<"Vous avez " << get_nom() << "Notes : " << note << endl;
+	l
 };
