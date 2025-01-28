@@ -1,22 +1,19 @@
-#include "instruments.hpp"
+#include <iostream>
+#include <map>
+#include <windows.h>
+#include <conio.h>
+#include <string>
+#include <fstream>
+#include <sstream>
 
-string main(){
-    cout << "Choisissez un instrument : " << endl;
-    cout << "1. Piano" << endl;
-    cout << "2. Xylophone" << endl;
-    cout << "3. Guitare" << endl;
-    int choix;
-    cin >> choix
 
-    if (choix == 1) {
-        void Jouer()
-    }
-}
+using namespace std;
 
 int main() {
-    int x;
-    int y;
+    char x;
+    char y;
     bool f;
+    float r;
     string tab [5][7] = {
     {"A-1","B-1","C-1","D-1","E-1","F-1","G-1"},
     {"A0","B0","C0","D0","E0","F0","G0"},
@@ -24,17 +21,54 @@ int main() {
     {"A2","B2","C2","D2","E2","F2","G2"},
     {"A3","B3","C3","D3","E3","F3","G3"}
     };
-    cout << "quelle gamme choisissez vous : 1 , 2 , 3 , 4 ,5 ? ";
-    cin >> x;
-    while ( !f ) {
-        cout << "écrivez vos notes entre 0 et 6";
-        y << cin;
-        if ( y == "a" || y == "A" ){
-            f == true;
-        } else {
-            cout << tab[x][y] << endl;
-        }
 
+    x = 'w';
+
+    map<char, int> gammes; 
+    gammes['w'] = 1;
+    gammes['x'] = 2;
+    gammes['c'] = 3;
+    gammes['v'] = 4;
+    gammes['b'] = 5;
+
+    map<char, string> association;
+    association['a'] = tab[gammes[x]][0];
+    association['z'] = tab[gammes[x]][1];
+    association['e'] = tab[gammes[x]][2];
+    association['r'] = tab[gammes[x]][3];
+    association['t'] = tab[gammes[x]][4];
+    association['y'] = tab[gammes[x]][5];
+    association['u'] = tab[gammes[x]][6];
+
+    cout << "choisissez le rythme en millisecondes ";
+    cin >> r; 
+    cout << "changer la gamme en appuyant sur : w, x, c, v, b" << endl;
+    cout << "choisissez la note en appuyant sur : a, z, e, r, t, y, u" << endl;
+
+    while ( !f ) {
+        if (_kbhit()) { // Vérifie si une touche est pressée
+            char key = _getch(); // Récupère la touche pressée sans attendre Enter
+            if (key == 'q') { // Sortir si l'utilisateur tape 'q'
+                cout << "Fin du programme." << endl;
+                f = true;
+            } else if (key == 'a'|| key == 'z' || key == 'e' || key == 'r' || key == 't' || key == 'y' || key == 'u') {
+                cout << association[key] << endl;
+                Sleep(r);
+            } else if (key == 'w'|| key == 'x' || key == 'c' || key == 'v' || key == 'b'){      
+            association['a'] = tab[gammes[key]][0];
+            association['z'] = tab[gammes[key]][1];
+            association['e'] = tab[gammes[key]][2];
+            association['r'] = tab[gammes[key]][3];
+            association['t'] = tab[gammes[key]][4];
+            association['y'] = tab[gammes[key]][5];
+            association['u'] = tab[gammes[key]][6];
+                cout << "vous avez changer de gamme" << endl;
+            } else {
+                cout << "entree incorrecte" << endl;
+            }
+        }
     }
     return 0;
-}
+};
+
+

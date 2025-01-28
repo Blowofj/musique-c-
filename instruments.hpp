@@ -12,7 +12,7 @@ class Instruments
     public: 
         Instruments();
         string get_nom();
-        virtual void Jouer();
+        virtual int Jouer();
 
 };
 
@@ -20,7 +20,7 @@ class Piano:public Instruments
 {
     public:
         Piano();
-        void Jouer();
+        int Jouer();
 
 };
 
@@ -28,7 +28,7 @@ class Xylophone:public Instruments
 {
     public:
         Xylophone();
-        void Jouer();
+        int Jouer();
 
 };
 
@@ -36,7 +36,7 @@ class Guitare:public Instruments
 {
     public:
         Guitare();
-        void Jouer();
+        int Jouer();
 };
 
 #endif
