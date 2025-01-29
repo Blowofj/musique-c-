@@ -11,7 +11,7 @@ using namespace std;
 
 Instruments::Instruments()
 {
-    m_nom = "none";  // Utiliser la variable membre m_nom
+    m_nom = "none";  
 }
 
 string Instruments::get_nom()
@@ -214,4 +214,7 @@ int Xylophone::Jouer() {
         }
     }
     return 0;
+}
+Instruments::~Instruments() {
+    
 }
