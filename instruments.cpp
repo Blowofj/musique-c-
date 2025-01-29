@@ -66,9 +66,9 @@ int Instruments::Jouer() {
                 association['t'] = tab[octaves[key]][4];
                 association['y'] = tab[octaves[key]][5];
                 association['u'] = tab[octaves[key]][6];
-                cout << "vous avez changé de gamme" << endl;
+                cout << "vous avez changer de gamme" << endl;
             } else {
-                cout << "entrée incorrecte" << endl;
+                cout << "entree incorrecte" << endl;
             }
         }
     }
@@ -116,9 +116,9 @@ int Piano::Jouer() {
                 // Changer octave
                 // Actualiser les notes selon l'octave
                 // exemple : multiplier les fréquences par l'octave
-                cout << "vous avez changé d'octave" << endl;
+                cout << "vous avez changer d'octave" << endl;
             } else {
-                cout << "entrée incorrecte" << endl;
+                cout << "entree incorrecte" << endl;
             }
         }
     }
@@ -162,9 +162,9 @@ int Guitare::Jouer() {
             } else if (association.find(key) != association.end()) {
                 Beep(association[key] * 100, (int)r);
             } else if (octaves.find(key) != octaves.end()) {
-                cout << "vous avez changé d'octave" << endl;
+                cout << "vous avez changer d'octave" << endl;
             } else {
-                cout << "entrée incorrecte" << endl;
+                cout << "entree incorrecte" << endl;
             }
         }
     }
@@ -207,9 +207,9 @@ int Xylophone::Jouer() {
             } else if (association.find(key) != association.end()) {
                 Beep(association[key] * 100, (int)r);
             } else if (octaves.find(key) != octaves.end()) {
-                cout << "vous avez changé d'octave" << endl;
+                cout << "vous avez changer d'octave" << endl;
             } else {
-                cout << "entrée incorrecte" << endl;
+                cout << "entree incorrecte" << endl;
             }
         }
     }
