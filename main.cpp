@@ -42,6 +42,8 @@ int main() {
 }
 
 int LectureFichier() {
+// Déclaration de la fonction LectureFichier
+// Permet de lire un fichier musical et de jouer les notes enregistrées
     string route;
     string ligne;
     string note;

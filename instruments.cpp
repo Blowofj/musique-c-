@@ -20,6 +20,9 @@ string Instruments::get_nom()
 }
 
 int Instruments::Jouer() {
+// Fonction permettant de jouer des notes
+// L'utilisateur peut choisir une gamme et appuyer sur des touches
+// pour jouer des notes. L'arrêt du programme se fait avec 'q'.
     char x = 'w';
     bool f = false;
     float r;
@@ -83,6 +86,9 @@ Piano::Piano()
 }
 
 int Piano::Jouer() {
+// Fonction permettant de jouer des notes
+// L'utilisateur peut choisir une gamme et appuyer sur des touches
+// pour jouer des notes. L'arrêt du programme se fait avec 'q'.
     char x = 'w';
     bool f = false;
     float r;
@@ -133,6 +139,9 @@ Guitare::Guitare()
 }
 
 int Guitare::Jouer() {
+// Fonction permettant de jouer des notes
+// L'utilisateur peut choisir une gamme et appuyer sur des touches
+// pour jouer des notes. L'arrêt du programme se fait avec 'q'.
     char x = 'w';
     bool f = false;
     float r;
@@ -179,6 +188,9 @@ Xylophone::Xylophone()
 }
 
 int Xylophone::Jouer() {
+// Fonction permettant de jouer des notes
+// L'utilisateur peut choisir une gamme et appuyer sur des touches
+// pour jouer des notes. L'arrêt du programme se fait avec 'q'.
     char x = 'w';
     bool f = false;
     float r;

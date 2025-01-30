@@ -4,10 +4,11 @@
 #include <iostream>
 using namespace std;
 
+// Définition de la classe parents Instruments et des classes filles
+
 class Instruments {
 protected:
     string m_nom;
-    string m_rythme;
 public:
     Instruments();
     virtual ~Instruments();
